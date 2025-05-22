@@ -28,7 +28,7 @@ jobs:
       with:
         node-version: '18'
         cache: 'npm'
-    - run: docker build -t $MODULE_FULLNAME ./cicd2025/frontend
+    - run: docker build -t $MODULE_FULLNAME -f ./cicd2025/frontend/Dockerfile ./cicd2025/frontend
     - run: |
         docker tag $MODULE_FULLNAME:$TAG \
         $REGISTRY_URL/$MODULE_FULLNAME:$TAG
