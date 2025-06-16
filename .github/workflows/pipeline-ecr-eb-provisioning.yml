@@ -9,8 +9,8 @@ env:
   AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
   AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
   AWS_REGION: ${{ vars.AWS_REGION }}
-  PROJECT_NAME: ${{ vars.PROJECT_NAME }}-v2
-  MODULE_NAME: ${{ vars.MODULE_NAME }}-v2
+  PROJECT_NAME: ${{ vars.PROJECT_NAME }}
+  MODULE_NAME: ${{ vars.MODULE_NAME }}
   S3_BUCKET: ${{ vars.S3_BUCKET }}
   
 jobs:
@@ -18,8 +18,8 @@ jobs:
      runs-on: ubuntu-latest
      env:
        TF_VAR_AWS_REGION: ${{ vars.AWS_REGION }}
-       TF_VAR_PROJECT_NAME: ${{ vars.PROJECT_NAME }}-v2
-       TF_VAR_MODULE_NAME: ${{ vars.MODULE_NAME }}-v2       
+       TF_VAR_PROJECT_NAME: ${{ vars.PROJECT_NAME }}
+       TF_VAR_MODULE_NAME: ${{ vars.MODULE_NAME }}      
        TF_VAR_S3_BUCKET: ${{ vars.S3_BUCKET }}       
        TF_VAR_SOLUTION_STACK_NAME: ${{ vars.STACK_NAME }}
        TF_VAR_WORKING_DIR: ".environment"      
