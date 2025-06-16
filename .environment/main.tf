@@ -8,7 +8,7 @@ resource "aws_ecr_repository" "cyo_ecr_repo" {
 }
 
 resource "aws_elastic_beanstalk_application" "cyo_eba" {
-  name        = "${var.PROJECT_NAME}-${var.MODULE_NAME}"
+  name        = "${var.PROJECT_NAME}"
   description = "Project application"
 }
 
